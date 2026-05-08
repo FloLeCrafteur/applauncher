@@ -3,30 +3,63 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Hub Workspace</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Launcher</title>
+
     <link rel="stylesheet" href="styles.css">
-    <link rel="favicon" href="img/logo.png">
     <link rel="icon" href="img/logo.png">
 </head>
 
 <body>
+    <div class="logo">
+        <img src="img/title.png" width="800">
+    </div>
 
-    <main class="home">
-        <h1>🚀 Choisis ta suite</h1>
-
-        <div class="choice-container">
-            <a href="google.html" class="choice">
-                <img src="img/google.png" alt="Google">
-                <p>Google Workspace</p>
+    <div class="launcher">
+        <div class="title"> <img src="img/google/google.png" alt="">
+            <h2>Google Workspace</h2>
+        </div>
+        <div class="shortcuts">
+            <a href="https://docs.google.com" target="_blank" class="shortcut">
+                <div><img src="img/google/docs.png" alt=""><br>
+                    <p>Docs</p>
+                </div>
             </a>
-
-            <a href="microsoft.html" class="choice">
-                <img src="img/microsoft.png" alt="Microsoft">
-                <p>Microsoft Office</p>
+            <a href="https://sheets.google.com" target="_blank" class="shortcut">
+                <div><img src="img/google/sheets.png" alt=""><br>
+                    <p>Sheets</p>
+                </div>
+            </a>
+            <a href="https://slides.google.com" target="_blank" class="shortcut">
+                <div><img src="img/google/slides.png" alt=""><br>
+                    <p>Slides</p>
+                </div>
             </a>
         </div>
-    </main>
+    </div>
 
+    <div class="launcher">
+        <div class="title"> <img src="img/microsoft/microsoft.png" alt="">
+            <h2>Microsoft Office</h2>
+        </div>
+        <div class="shortcuts">
+            <a href="https://www.office.com/launch/word" target="_blank" class="shortcut">
+                <div><img src="img/microsoft/word.png" alt=""><br>
+                    <p>Word</p>
+                </div>
+            </a>
+            <a href="https://www.office.com/launch/excel" target="_blank" class="shortcut">
+                <div><img src="img/microsoft/excel.png" alt=""><br>
+                    <p>Excel</p>
+                </div>
+            </a>
+            <a href="https://www.office.com/launch/powerpoint" target="_blank" class="shortcut">
+                <div><img src="img/microsoft/powerpoint.png" alt=""><br>
+                    <p>PowerPoint</p>
+                </div>
+            </a>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -1,61 +1,92 @@
-html, body {
+/* RESET & BASE */
+html,
+body {
     height: 100%;
-    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     min-height: 100vh;
+    overflow-x: hidden;
     font-family: Arial, sans-serif;
     background: linear-gradient(to top, #1e1f72, #2a5298);
     background-repeat: no-repeat;
+    background-attachment: fixed;
     color: white;
     text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 /* HOME */
 .logo {
     text-align: center;
-    margin: 50px;
+    margin: 30px auto;
 }
 
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* LAUNCHER */
 .launcher {
-    margin-top: 50px;
+    margin: 40px auto 0;
     background-color: #1e1f72;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     border-radius: 50px 20px 20px 20px;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .launcher .title {
     display: flex;
     align-items: center;
+    gap: 15px;
     background-color: #0000005d;
-    border-radius: 50px 0px;
+    border-radius: 50px 0;
     width: fit-content;
-    padding-right: 50px;
-    padding-left: 20px;
+    max-width: 100%;
+    padding: 15px 40px 15px 20px;
+    box-sizing: border-box;
 }
 
 .launcher .title img {
     width: 70px;
-    margin: 20px 20px 20px 0px;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
 }
 
+/* SHORTCUTS */
 .shortcuts {
     display: flex;
-    margin-left: 10px;
-    margin-right: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .shortcut {
     background-color: #dbdbdb1a;
-    width: 100px;
-    padding: 10px 20px 0px;
+    width: 120px;
+    min-height: 120px;
+    padding: 15px;
     border-radius: 20px;
-    margin: 20px 10px;
     color: #fff;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.25s ease;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .shortcut:hover {
@@ -65,4 +96,74 @@ body {
 
 .shortcuts img {
     width: 50px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* TABLET */
+@media screen and (max-width: 768px) {
+
+    .launcher {
+        border-radius: 30px 15px 15px 15px;
+    }
+
+    .launcher .title {
+        width: 100%;
+        justify-content: center;
+        border-radius: 30px 0;
+        padding: 15px;
+    }
+
+    .launcher .title img {
+        width: 55px;
+    }
+
+    .shortcut {
+        width: calc(50% - 20px);
+        min-width: 140px;
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width: 480px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .logo {
+        margin: 20px auto;
+    }
+
+    .launcher {
+        margin-top: 20px;
+    }
+
+    .launcher .title {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .launcher .title img {
+        width: 50px;
+    }
+
+    .shortcuts {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .shortcut {
+        width: 100%;
+        margin: 0;
+    }
+
+    .shortcut:hover {
+        transform: none;
+    }
+
+    .shortcuts img {
+        width: 40px;
+    }
 }
